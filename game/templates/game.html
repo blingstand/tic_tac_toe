@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% comment %} game.html {% endcomment %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="head">
+        <h1>TIC TAC TOE</h1>
+        <h3>Welcome to room_{{room_code}}</h3>
+        <h3>Player: {{char_choice}}</h3>
+    </div>
+    <div id = "game_board" room_code={{room_code}} char_choice={{char_choice}}>
+        <div class="square" id='0'></div>
+        <div class="square" id='1'></div>
+        <div class="square" id='2'></div>
+        <div class="square" id='3'></div>
+        <div class="square" id='4'></div>
+        <div class="square" id='5'></div>
+        <div class="square" id='6'></div>
+        <div class="square" id='7'></div>
+        <div class="square" id='8'></div>
+    </div>
+
+    <div id = "alert_move">Your turn. Place your move <strong>{{char_choice}}</strong></div>
+</div>
+{% endblock content %}
